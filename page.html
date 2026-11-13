@@ -72,7 +72,6 @@ p{margin:0}
 .fit{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
 .fit li{position:relative;padding:10px 0 10px 20px;font-size:16px;line-height:1.45;color:var(--ink);border-top:1px solid var(--line)}
 .fit li::before{content:"";position:absolute;left:1px;top:19px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.fit li:nth-child(5){grid-column:1/-1}
 
 /* Hero form (version B only) */
 .hero-form{display:none}
@@ -130,12 +129,12 @@ section{padding:clamp(72px,10vw,128px) 0}
 .small{font-size:14px;color:var(--ink-2)}
 .glink{font:600 15px/1.4 var(--display);color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 
-/* Fit filter */
-.fitf-grid{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
-.col h3{padding-bottom:14px;border-bottom:2px solid var(--navy)}
-.col.no h3{border-color:var(--line);color:var(--ink-2)}
-.col ul{list-style:none;margin:0;padding:0}
-.col li{padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
+/* Who it isn't for */
+.notfor-grid{display:grid;grid-template-columns:4fr 8fr;gap:56px;align-items:start}
+.notfor h2{font-size:34px;line-height:1.2}
+.notfor ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.notfor li{position:relative;padding:18px 0 18px 30px;border-bottom:1px solid var(--line);font-size:17px;color:var(--ink)}
+.notfor li::before{content:"";position:absolute;left:2px;top:30px;width:14px;height:2px;background:var(--ink-2);opacity:.6}
 
 /* How + form */
 .how{padding-bottom:0}
@@ -202,7 +201,8 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
 
 /* Tablet */
 @media (max-width:1024px){
-  .hero-grid,.problem-grid,.learn-grid,.pres-grid,.faq-grid{grid-template-columns:1fr;gap:40px}
+  .hero-grid,.problem-grid,.learn-grid,.pres-grid,.faq-grid,.notfor-grid{grid-template-columns:1fr;gap:40px}
+  .notfor-grid{gap:24px}
   .hero-grid{padding-bottom:130px}
   .learn-head{position:static}
   .rev-grid{grid-template-columns:1fr;gap:36px}
@@ -237,7 +237,6 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
   .under{text-align:center}
   .fitcard{margin:0;padding:22px 20px 14px;border-radius:var(--r-card) var(--r-card) 0 0;box-shadow:none;border:0}
   .fit{grid-template-columns:1fr}
-  .fit li:nth-child(5){grid-column:auto}
   .cred{padding-top:0}
   .cred ul{grid-template-columns:1fr 1fr;padding:6px var(--gut)}
   .cred li{padding:14px 12px 14px 0;border-left:0;border-top:1px solid var(--line);font-size:13px}
@@ -247,8 +246,9 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
   .path-v{display:block;max-width:320px;margin:0 auto}
   .rows li{grid-template-columns:44px 1fr;padding:22px 0}
   .learn-head .btn{display:none}
-  .fitf-grid{grid-template-columns:1fr;gap:36px}
-  .col li{padding:12px 0;font-size:16px}
+  .notfor h2{font-size:28px}
+  .notfor li{padding:14px 0 14px 28px;font-size:16px}
+  .notfor li::before{top:26px}
   .steps{grid-template-columns:1fr;gap:28px}
   .steps li{padding:0 0 0 36px}
   .steps li::before{top:3px}
@@ -322,10 +322,9 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
     <p>This is for you if:</p>
     <ul class="fit">
       <li>A knee, shoulder, hip, elbow or ankle has hurt for months.</li>
-      <li>Each cortisone shot seems to wear off a little sooner than the last one.</li>
       <li>Someone has mentioned surgery or a joint replacement, and you want to understand the alternatives first.</li>
       <li>You’ve already had PRP somewhere else, and it didn’t do what you hoped.</li>
-      <li>You’re active and want to stay that way.</li>
+      <li>You’d like a spouse or family member to hear it too.</li>
     </ul>
   </div>
 </div>
@@ -429,27 +428,14 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
   </div>
 </section>
 
-<section aria-labelledby="fit-h">
-  <div class="wrap">
-    <h2 id="fit-h">Who this webinar fits</h2>
-    <div class="fitf-grid">
-      <div class="col">
-        <h3>A good fit if</h3>
-        <ul>
-          <li>You want to understand your options before you agree to a procedure.</li>
-          <li>Learning from home is easier than taking time off for an appointment.</li>
-          <li>You’d like a spouse or family member to hear it too.</li>
-        </ul>
-      </div>
-      <div class="col no">
-        <h3>Probably not a fit if</h3>
-        <ul>
-          <li>You want a diagnosis or a review of your own imaging during the webinar. Dr. Jani answers general questions; a personal answer needs an exam.</li>
-          <li>You’re looking for a promise of a particular result or recovery time.</li>
-          <li>Your surgery is already scheduled and you’re comfortable with the plan.</li>
-        </ul>
-      </div>
-    </div>
+<section class="notfor" aria-labelledby="fit-h">
+  <div class="wrap notfor-grid">
+    <h2 id="fit-h">Who this webinar isn’t for</h2>
+    <ul>
+      <li>You want a diagnosis or a review of your own imaging during the webinar. Dr. Jani answers general questions; a personal answer needs an exam.</li>
+      <li>You’re looking for a promise of a particular result or recovery time.</li>
+      <li>Your surgery is already scheduled and you’re comfortable with the plan.</li>
+    </ul>
   </div>
 </section>
 
