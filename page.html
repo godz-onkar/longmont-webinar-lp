@@ -14,7 +14,7 @@
 <link rel="preload" as="image" href="assets/hero.jpg">
 <style>
 :root{
-  --canvas:#F6F9F5; --canvas-alt:#EAF1F9; --ink:#091405; --ink-2:#4D5A68;
+  --canvas:#F6F9F5; --canvas-alt:#EAF1F9; --canvas-deep:#DCE7F3; --ink:#091405; --ink-2:#4D5A68;
   --navy:#044389; --deep:#022C5C; --gold:#FCBF49; --gold-hover:#F7AD56;
   --line:rgba(4,67,137,.14); --line-light:rgba(255,255,255,.16);
   --display:"Montserrat",system-ui,sans-serif; --body:"Heebo",system-ui,sans-serif;
@@ -111,13 +111,13 @@ section{padding:clamp(72px,10vw,128px) 0}
 
 /* Presenter + reviews band */
 .band{background:var(--canvas-alt)}
+.band-rev{background:var(--canvas-deep);border-top:1px solid var(--line)}
 .pres-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center}
 .pres-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r-card)}
 .pres-photo figcaption{margin-top:14px;padding-left:14px;border-left:3px solid var(--gold);font:600 15px/1.5 var(--display);color:var(--ink)}
 .pres-name{margin-top:12px;font:600 15px/1.4 var(--display);color:var(--ink-2)}
 .pres-copy p{margin-top:18px;max-width:54ch}
 .pres-copy p.pres-name{margin-top:12px}
-.reviews{margin-top:clamp(72px,9vw,112px);padding-top:clamp(48px,6vw,72px);border-top:1px solid var(--line)}
 .rev-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 .rev{margin:0;display:flex;flex-direction:column}
 .rev .stars{margin-bottom:14px}
@@ -412,8 +412,12 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
         <p>Surgery can be necessary. The useful question is when it belongs in the plan, and that depends on the diagnosis, the imaging and your goals.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="reviews" aria-labelledby="rev-h">
+<section class="band band-rev" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="reviews">
       <h2 id="rev-h">What patients say about Dr. Jani</h2>
       <div class="rev-grid">
         <figure class="rev"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><blockquote>“After years of mountainbiking, bump skiing and running, my left knee was chronically bothering me. My pain is greatly reduced now, and I’m back to being active.”</blockquote><figcaption><b>Nick P.</b> · Google review</figcaption></figure>
