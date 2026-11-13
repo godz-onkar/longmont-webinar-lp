@@ -52,10 +52,15 @@ h1{font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;letter-spaci
 <div class="top">
   <div>
     <h1>Longmont Orthopedics: webinar registration page</h1>
-    <p>Layout preview for the Nov 17 webinar page with Dr. Sunil Jani, desktop at 1440 and mobile at 390. Scroll inside each frame. Copy is version 1.1 from the vault. The form is a styled stand-in; the live page uses the GHL form. <a href="page.html">Open the page on its own</a>.</p>
+    <p>Layout preview for the Nov 17 webinar page with Dr. Sunil Jani, desktop at 1440 and mobile at 390. Scroll inside each frame. Copy is version 1.2 from the vault. Version A has the photo in the hero; version B puts the form there instead (A/B test). The form is a styled stand-in; the live page uses the GHL form. Open on its own: <a href="page.html">version A</a> · <a href="page.html?v=b">version B</a>.</p>
   </div>
-  <div class="tabs" role="tablist" aria-label="View">
-    <button class="on" data-v="" role="tab">Both</button><button data-v="d" role="tab">Desktop</button><button data-v="m" role="tab">Mobile</button>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <div class="tabs" role="tablist" aria-label="Version" id="ver">
+      <button class="on" data-p="page.html" role="tab">Version A</button><button data-p="page.html?v=b" role="tab">Version B</button>
+    </div>
+    <div class="tabs" role="tablist" aria-label="View" id="view">
+      <button class="on" data-v="" role="tab">Both</button><button data-v="d" role="tab">Desktop</button><button data-v="m" role="tab">Mobile</button>
+    </div>
   </div>
 </div>
 <div class="stage" id="stage">
@@ -99,35 +104,45 @@ h1{font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;letter-spaci
   <ul>
     <li><b>Logo, white text</b> (hero and footer): <code>assets/logo-light.png</code>, from the live GHL page.</li>
     <li><b>Logo, navy text</b> (spare, for light backgrounds): <code>assets/logo-dark.png</code>, from longmontorthopedics.com.</li>
-    <li><b>Dr. Jani headshot</b> (hero and presenter): <code>assets/jani.jpg</code>, from the live GHL page. It’s the only photo on file, so it appears twice with different crops. Worth asking Anne for a clinic shot of Dr. Jani with a patient for the presenter section.</li>
+    <li><b>Dr. Jani headshot</b>, from the live GHL page, in three crops: <code>assets/hero.jpg</code> (desktop hero, 600 by 900, 101KB), <code>assets/presenter.jpg</code> (tighter square for the presenter section) and <code>assets/face.jpg</code> (round headshot on the mobile hero, the form card and version B). It’s the only photo on file. Worth asking Anne for a clinic shot of Dr. Jani with a patient for the presenter section.</li>
   </ul>
 
   <h3>Section by section</h3>
   <ol>
-    <li><b>Sticky bar.</b> Desktop: navy bar at the top with the date and the button; it slides in once the hero button scrolls away. Mobile: button at the bottom from the first screen. Both hide while the hero button, the form or the closing section is on screen.</li>
-    <li><b>Hero.</b> Navy band. Logo, eyebrow, three-sentence headline (first two sentences dimmed, the answer bright), subhead, the five "This is for you if" lines, countdown pill and event line, one button. Dr. Jani’s photo on the right on desktop, below the button on mobile. On a 390 phone the first screen shows the eyebrow, headline, subhead and the first two lines; the bottom bar carries the button.</li>
-    <li><b>Credibility bar.</b> Five items in one strip with hairline dividers: 5.0 on Google, board-certified, Penn residency, Taos fellowship, 10+ years in Longmont. Two columns on mobile.</li>
-    <li><b>The problem.</b> The page’s quiet section: three short paragraphs on the left, the "step in between" diagram on the right. The diagram is the page’s motif: three stops on one line, with the middle stop drawn as the gold sun from the Longmont logo.</li>
-    <li><b>What you’ll leave knowing.</b> Heading and button on the left (they stay in view while scrolling on desktop), five numbered rows on the right with hairline dividers.</li>
-    <li><b>Meet your presenter.</b> Light blue band, photo left, three paragraphs right.</li>
-    <li><b>What patients say.</b> Same band. Three Google reviews as quotes, the results line, and a button.</li>
+    <li><b>Sticky bar.</b> Desktop: navy bar at the top with the date and the button; it slides in once the hero button scrolls away. Mobile: button at the bottom. Both hide whenever another button, a form or the closing section is on screen, so two gold buttons never show at once.</li>
+    <li><b>Hero.</b> Navy band. Slim logo line, eyebrow, then the headline in two sizes: the first two sentences as a smaller dimmed lead-in, "There’s a step in between." as the big line. Subhead. Button with the countdown pill and event line beside it, "Four quick fields" under it. Desktop: Dr. Jani’s photo on the right with his name on the photo. Mobile: no big photo; a round headshot with his name sits above the date, and the button lands on the first screen.</li>
+    <li><b>"This is for you if" card.</b> White card overlapping the bottom edge of the hero. Desktop: two columns, the fifth line full width. Mobile: one column, right under the hero.</li>
+    <li><b>Credibility bar.</b> Five items in one strip with hairline dividers: 5.0 on Google · 15 reviews, board-certified, Penn residency, Taos fellowship, 10+ years in Longmont. Two columns on mobile.</li>
+    <li><b>The problem.</b> The page’s quiet section: three short paragraphs and the "step in between" diagram, the page’s motif (three stops on one line, the middle stop drawn as the gold sun from the Longmont logo). Desktop: diagram on the right, horizontal. Mobile: the diagram turns vertical so the labels stay readable.</li>
+    <li><b>What you’ll leave knowing.</b> Heading and button on the left (they stay in view while scrolling on desktop), five numbered rows on the right with hairline dividers. On mobile the button is hidden here and the bottom bar carries it.</li>
+    <li><b>Meet your presenter.</b> Light blue band, square photo left with the footbag line as a gold-ruled caption under it, three paragraphs right.</li>
+    <li><b>What patients say.</b> Same band. Three Google reviews with five stars each, a "Read all 15 reviews on Google" link (opens Google Maps in a new tab), the results line, and a button.</li>
     <li><b>Who this webinar fits.</b> Two columns, "good fit" with a navy rule, "probably not" with a gray one. Stacked on mobile.</li>
     <li><b>How the webinar works.</b> Four numbered steps on one line (the path line again, without the sun). Two columns on tablet, stacked on mobile.</li>
-    <li><b>Form.</b> White card with a soft shadow, labels above the fields, gold button full width, replay line under it.</li>
+    <li><b>Form.</b> White card with a soft shadow. The top row repeats the round headshot and the event line, so the date is in view at the moment of signing up. Labels above the fields, gold button full width, replay line under it.</li>
     <li><b>FAQ.</b> Five questions, closed by default, chevron opens each.</li>
     <li><b>Final CTA and footer.</b> Navy band, a small three-dot version of the path, headline, closing line, event line, button. Footer inside the same band: logo, address and phone as on Google, email, disclaimer.</li>
   </ol>
 
+  <h3>Version B (A/B test)</h3>
+  <ul>
+    <li>Same page, same copy. The hero’s right column holds the registration form instead of the photo, and the hero button is removed (the form is the action). The round headshot sits under the subhead on desktop and mobile.</li>
+    <li>On mobile the form comes right after the date line, before the "This is for you if" card.</li>
+    <li>The form section further down stays, so step 1 of "How the webinar works" ("Fill out the form below") is still true there.</li>
+    <li>Build as a separate GHL page and split the ad traffic 50/50. Same form, same tags, so registrations compare cleanly.</li>
+  </ul>
+
   <h3>How the page behaves</h3>
   <ul>
     <li>The countdown pill counts days to November 17 in Mountain time: "4 days left," then "Tomorrow at 7 PM MT," then "Today at 7 PM MT," then it hides.</li>
-    <li>Every "Save my free spot" button scrolls to the form. Nothing links off the page except the phone and email in the footer.</li>
+    <li>Every "Save my free spot" button scrolls to the form. Off-page links: the Google reviews link (new tab), and the phone and email in the footer.</li>
     <li>No scroll animations. Buttons darken slightly on hover. The sticky bar slide is turned off for people who reduce motion.</li>
   </ul>
 
   <h3>Checked on this build</h3>
   <ul>
-    <li>Desktop 1440 and mobile 390 reviewed screen by screen. No sideways scroll on mobile. Zero console errors, zero em dashes, no dead links.</li>
+    <li>Desktop 1440 and mobile 390 reviewed screen by screen, versions A and B. No sideways scroll on mobile. Zero console errors, zero em dashes, no dead links, no broken images.</li>
+    <li>Version A: the hero button sits at 533px on a 900px desktop screen and 554px on an 844px phone. The mobile hero ends at 673px.</li>
     <li>Text contrast passes AA everywhere (body text 17.8:1, secondary 6.2:1 or better, button text 11.4:1).</li>
   </ul>
 
@@ -142,8 +157,9 @@ h1{font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;letter-spaci
 
 <script>
 (function(){
-  var stage=document.getElementById('stage'), btns=document.querySelectorAll('.tabs button');
+  var stage=document.getElementById('stage'), btns=document.querySelectorAll('#view button'), vers=document.querySelectorAll('#ver button');
   btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');stage.className='stage '+b.dataset.v;fit();});});
+  vers.forEach(function(b){b.addEventListener('click',function(){vers.forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.querySelectorAll('#stage iframe').forEach(function(f){f.src=b.dataset.p;});});});
   var wrap=document.getElementById('dwrap'), fr=document.getElementById('dfr');
   function fit(){var w=wrap.clientWidth; if(!w) return; var s=w/1440; fr.style.transform='scale('+s+')'; wrap.style.height=(900*s)+'px';}
   window.addEventListener('resize',fit); fit();

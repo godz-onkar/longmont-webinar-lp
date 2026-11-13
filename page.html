@@ -6,10 +6,12 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Free Webinar with Dr. Sunil Jani · Nov 17 · Longmont Orthopedics</title>
 <meta name="description" content="A free live webinar with orthopedic surgeon Dr. Sunil Jani on PRP, bone marrow injections and when surgery makes sense. Tuesday, November 17, 7 PM Mountain.">
+<script>if(/[?&]v=b\b/.test(location.search)){document.documentElement.classList.add('vb');}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FCBF49'/%3E%3Cg stroke='%23FCBF49' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M16 2v4M16 26v4M2 16h4M26 16h4M6 6l2.8 2.8M23.2 23.2 26 26M6 26l2.8-2.8M23.2 8.8 26 6'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Heebo:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.jpg">
 <style>
 :root{
   --canvas:#F6F9F5; --canvas-alt:#EAF1F9; --ink:#091405; --ink-2:#4D5A68;
@@ -29,48 +31,62 @@ h1,h2,h3{font-family:var(--display);margin:0;color:var(--navy);text-wrap:balance
 h2{font-weight:700;font-size:42px;line-height:1.15;letter-spacing:-.02em}
 h3{font-weight:600;font-size:20px;line-height:1.3;letter-spacing:-.01em;color:var(--ink)}
 p{margin:0}
-.label{font:700 12px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
 .num{font-variant-numeric:tabular-nums}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:15px;height:15px;fill:var(--gold)}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:16px 28px;border-radius:var(--r-btn);background:var(--gold);color:var(--ink);font:700 17px/1 var(--display);text-decoration:none;border:0;cursor:pointer;transition:background-color .15s ease-out}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:16px 28px;border-radius:var(--r-btn);background:var(--gold);color:var(--ink);font:700 17px/1 var(--display);text-decoration:none;border:0;cursor:pointer;transition:background-color .15s ease-out;white-space:nowrap}
 .btn:hover{background:var(--gold-hover)}
 .btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .btn svg{width:18px;height:18px}
 
 /* Hero */
-.hero{background:linear-gradient(160deg,var(--deep) 0%,var(--navy) 100%);color:#fff;padding:24px 0 88px}
-.hero .logo{width:170px;height:auto;margin-bottom:36px}
-.hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start}
-.eyebrow{font:700 12px/1.4 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-.hero h1{color:#fff;font-weight:700;font-size:44px;line-height:1.12;letter-spacing:-.025em}
-.hero h1 span{display:block}
-.hero h1 .dim{color:rgba(255,255,255,.66)}
-.hero .sub{margin-top:20px;font-size:19px;line-height:1.55;color:rgba(255,255,255,.88);max-width:46ch}
-.fit-lead{margin-top:24px;font:600 15px/1.4 var(--display);color:#fff}
-.fit{list-style:none;margin:10px 0 0;padding:0;max-width:52ch}
-.fit li{position:relative;padding:8px 0 8px 22px;font-size:16px;line-height:1.45;color:rgba(255,255,255,.88);border-top:1px solid var(--line-light)}
-.fit li:last-child{border-bottom:1px solid var(--line-light)}
-.fit li::before{content:"";position:absolute;left:2px;top:17px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.when{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
-.pill{display:inline-flex;align-items:center;height:30px;padding:0 12px;border-radius:999px;background:rgba(252,191,73,.16);color:var(--gold);font:700 13px/1 var(--display);letter-spacing:.02em}
-.when-line{font:500 16px/1.4 var(--body);color:#fff}
-.hero .btn{margin-top:20px}
-.under{margin-top:12px;font-size:15px;color:rgba(255,255,255,.72)}
-.portrait{position:relative}
-.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;border-radius:var(--r-hero)}
-.host{margin-top:16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px;border-top:1px solid var(--line-light)}
-.host b{font:700 17px/1.3 var(--display);color:#fff}
-.host span{font-size:15px;color:rgba(255,255,255,.72)}
+.hero{background:linear-gradient(160deg,var(--deep) 0%,var(--navy) 100%);color:#fff;padding:20px 0 0}
+.topline{display:flex;align-items:center;height:52px;margin-bottom:28px}
+.topline img{width:138px}
+.hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:center;padding-bottom:140px}
+.eyebrow{font:700 12px/1.4 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{color:#fff}
+.hero h1 .lead{display:block;font-weight:600;font-size:23px;line-height:1.35;letter-spacing:-.01em;color:rgba(255,255,255,.72);max-width:30ch}
+.hero h1 .main{display:block;margin-top:12px;font-weight:700;font-size:56px;line-height:1.06;letter-spacing:-.028em}
+.hero .sub{margin-top:20px;font-size:19px;line-height:1.55;color:rgba(255,255,255,.88);max-width:44ch}
+.presenter-row{display:none;align-items:center;gap:12px;margin-top:22px}
+.presenter-row img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.35)}
+.presenter-row b{display:block;font:700 15px/1.3 var(--display);color:#fff}
+.presenter-row span{font-size:14px;color:rgba(255,255,255,.72)}
+.act{margin-top:30px;display:flex;align-items:center;gap:22px}
+.when{display:flex;flex-direction:column;gap:6px;flex:1 1 auto;min-width:0;max-width:300px}
+.pill{align-self:flex-start;display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;background:rgba(252,191,73,.16);color:var(--gold);font:700 12px/1 var(--display);letter-spacing:.02em}
+.when-line{font:500 15px/1.45 var(--body);color:#fff}
+.under{margin-top:12px;font-size:14px;color:rgba(255,255,255,.72)}
+.portrait{position:relative;margin:0}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 16%;border-radius:var(--r-hero)}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 18px;border-radius:0 0 var(--r-hero) var(--r-hero);background:linear-gradient(180deg,rgba(2,44,92,0) 0%,rgba(2,44,92,.88) 70%);display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.portrait figcaption b{font:700 17px/1.3 var(--display);color:#fff}
+.portrait figcaption span{font-size:14px;color:rgba(255,255,255,.85)}
+
+/* Fit card: overlaps the hero's bottom edge */
+.fitcard{position:relative;z-index:2;margin:-100px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);box-shadow:0 24px 60px -28px rgba(2,44,92,.35);padding:28px 32px}
+.fitcard p{font:700 15px/1.4 var(--display);color:var(--navy)}
+.fit{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.fit li{position:relative;padding:10px 0 10px 20px;font-size:16px;line-height:1.45;color:var(--ink);border-top:1px solid var(--line)}
+.fit li::before{content:"";position:absolute;left:1px;top:19px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.fit li:nth-child(5){grid-column:1/-1}
+
+/* Hero form (version B only) */
+.hero-form{display:none}
+.vb .portrait,.vb .act .btn,.vb .under{display:none}
+.vb .hero-form{display:block}
+.vb .act{margin-top:26px}
+.vb .presenter-row{display:flex}
 
 /* Credibility bar */
-.cred{border-bottom:1px solid var(--line);background:var(--canvas)}
-.cred ul{list-style:none;margin:0 auto;padding:0 var(--gut);max-width:var(--wrap);display:grid;grid-template-columns:1fr 1.1fr 1.15fr 1.25fr 1.1fr}
+.cred{background:var(--canvas);border-bottom:1px solid var(--line);padding-top:12px}
+.cred ul{list-style:none;margin:0 auto;padding:0 var(--gut);max-width:var(--wrap);display:grid;grid-template-columns:1fr 1fr 1.3fr 1.35fr 1.05fr}
 .cred li{font:600 14px/1.4 var(--display);color:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:22px 20px;border-left:1px solid var(--line)}
 .cred li:first-child{border-left:0;padding-left:0}
 .cred li:last-child{padding-right:0}
-.stars{display:inline-flex;gap:2px}
-.stars svg{width:15px;height:15px;fill:var(--gold)}
 
 /* Section rhythm */
 section{padding:clamp(72px,10vw,128px) 0}
@@ -79,37 +95,40 @@ section{padding:clamp(72px,10vw,128px) 0}
 /* Problem + motif */
 .problem-grid{display:grid;grid-template-columns:6fr 6fr;gap:72px;align-items:center}
 .problem h2{max-width:14ch}
-.problem p{margin-top:20px;max-width:46ch;color:var(--ink)}
+.problem p{margin-top:20px;max-width:46ch}
 .problem p:first-of-type{margin-top:28px}
 .path{width:100%;height:auto;overflow:visible}
-.path-cap{margin-top:18px;font-size:15px;color:var(--ink-2);text-align:center}
+.path-v{display:none}
 
 /* Learn */
 .learn-grid{display:grid;grid-template-columns:4fr 8fr;gap:56px}
 .learn-head{position:sticky;top:110px;align-self:start}
 .learn-head .btn{margin-top:32px}
-.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);counter-reset:f}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .rows li{display:grid;grid-template-columns:64px 1fr;gap:8px 20px;padding:28px 0;border-bottom:1px solid var(--line)}
 .rows .fol{font:700 14px/1.6 var(--display);color:var(--navy);letter-spacing:.04em}
-.rows h3{grid-column:2}
-.rows p{grid-column:2;color:var(--ink-2);max-width:56ch;font-size:17px}
+.rows h3,.rows p{grid-column:2}
+.rows p{color:var(--ink-2);max-width:56ch;font-size:17px}
 
 /* Presenter + reviews band */
 .band{background:var(--canvas-alt)}
 .pres-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center}
-.pres-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 12%;border-radius:var(--r-card)}
-.pres-name{margin-top:14px;font:600 15px/1.4 var(--display);color:var(--ink-2)}
+.pres-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r-card)}
+.pres-photo figcaption{margin-top:14px;padding-left:14px;border-left:3px solid var(--gold);font:600 15px/1.5 var(--display);color:var(--ink)}
+.pres-name{margin-top:12px;font:600 15px/1.4 var(--display);color:var(--ink-2)}
 .pres-copy p{margin-top:18px;max-width:54ch}
-.pres-copy p:first-of-type{margin-top:24px}
+.pres-copy p.pres-name{margin-top:12px}
 .reviews{margin-top:clamp(72px,9vw,112px);padding-top:clamp(48px,6vw,72px);border-top:1px solid var(--line)}
 .rev-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-.rev{margin:0}
+.rev{margin:0;display:flex;flex-direction:column}
+.rev .stars{margin-bottom:14px}
 .rev blockquote{margin:0;font-size:17px;line-height:1.6;color:var(--ink)}
-.rev blockquote::before{content:"\201C";display:block;font:700 48px/0.8 var(--display);color:var(--navy);margin-bottom:8px}
 .rev figcaption{margin-top:16px;font:600 14px/1.4 var(--display);color:var(--ink-2)}
 .rev figcaption b{color:var(--ink)}
 .rev-foot{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.rev-foot .meta{display:flex;flex-direction:column;gap:6px}
 .small{font-size:14px;color:var(--ink-2)}
+.glink{font:600 15px/1.4 var(--display);color:var(--navy);text-decoration:underline;text-underline-offset:3px}
 
 /* Fit filter */
 .fitf-grid{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
@@ -118,7 +137,7 @@ section{padding:clamp(72px,10vw,128px) 0}
 .col ul{list-style:none;margin:0;padding:0}
 .col li{padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
 
-/* How + form (dense passage) */
+/* How + form */
 .how{padding-bottom:0}
 .steps{position:relative;list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .steps::before{content:"";position:absolute;left:0;right:0;top:15px;height:2px;background:var(--navy);opacity:.25}
@@ -127,21 +146,28 @@ section{padding:clamp(72px,10vw,128px) 0}
 .steps .fol{font:700 13px/1 var(--display);color:var(--navy);letter-spacing:.06em}
 .steps h3{margin-top:10px;font-size:18px}
 .steps p{margin-top:8px;font-size:16px;color:var(--ink-2)}
-.register{padding-top:clamp(56px,7vw,88px)}
-.form-card{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);box-shadow:0 24px 60px -24px rgba(2,44,92,.35);padding:40px}
+.register{padding:clamp(56px,7vw,88px) 0 clamp(48px,6vw,72px)}
+.form-card{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--r-card);box-shadow:0 24px 60px -24px rgba(2,44,92,.35);padding:36px 40px 32px;color:var(--ink)}
 .form-card h2{font-size:32px;line-height:1.2}
-form{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-meta{display:flex;align-items:center;gap:12px;padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.form-meta img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.form-meta span{font:600 14px/1.45 var(--display);color:var(--ink-2)}
+form{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .field{display:flex;flex-direction:column;gap:7px}
 .field.full{grid-column:1/-1}
 label{font:600 14px/1.3 var(--display);color:var(--ink)}
-input{height:52px;padding:0 14px;font:400 17px var(--body);color:var(--ink);background:var(--canvas);border:1px solid rgba(4,67,137,.28);border-radius:var(--r-btn)}
+input{height:52px;padding:0 14px;font:400 17px var(--body);color:var(--ink);background:var(--canvas);border:1px solid rgba(4,67,137,.28);border-radius:var(--r-btn);width:100%}
 input:focus{border-color:var(--navy)}
 form .btn{grid-column:1/-1;width:100%;margin-top:6px}
 .form-note{grid-column:1/-1;text-align:center;font-size:15px;color:var(--ink-2)}
 .preview-msg{grid-column:1/-1;display:none;text-align:center;font-size:14px;color:var(--navy);background:var(--canvas-alt);border-radius:8px;padding:10px}
 .preview-msg.on{display:block}
+.hero-form .form-card{max-width:none;padding:28px 28px 24px;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);border:0}
+.hero-form .form-card h2{font-size:26px}
+.hero-form form{margin-top:18px;gap:14px}
 
 /* FAQ */
+.faq-sec{padding-top:clamp(48px,6vw,72px)}
 .faq-grid{display:grid;grid-template-columns:4fr 8fr;gap:56px}
 .faq{border-top:1px solid var(--line)}
 details{border-bottom:1px solid var(--line)}
@@ -174,46 +200,64 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
 .sticky .btn{min-height:48px;padding:12px 22px;font-size:16px}
 @media (prefers-reduced-motion:reduce){.sticky{transition:none}}
 
-/* Tablet and mobile */
+/* Tablet */
 @media (max-width:1024px){
   .hero-grid,.problem-grid,.learn-grid,.pres-grid,.faq-grid{grid-template-columns:1fr;gap:40px}
+  .hero-grid{padding-bottom:130px}
   .learn-head{position:static}
   .rev-grid{grid-template-columns:1fr;gap:36px}
-  .cred ul{grid-template-columns:repeat(3,1fr);row-gap:0}
-  .cred li:nth-child(4){border-left:0;padding-left:0}
-  .cred li:nth-child(n+4){border-top:1px solid var(--line)}
   .steps{grid-template-columns:1fr 1fr;row-gap:36px}
   .steps::before{display:none}
-  .portrait{max-width:460px}
+  .portrait{max-width:440px}
+  .cred ul{grid-template-columns:repeat(3,1fr)}
+  .cred li:nth-child(4){border-left:0;padding-left:0}
+  .cred li:nth-child(n+4){border-top:1px solid var(--line)}
+  .pres-photo{max-width:420px}
 }
+
+/* Mobile */
 @media (max-width:640px){
   :root{--gut:20px}
   body{font-size:17px}
   h2{font-size:32px}
-  .hero{padding:20px 0 64px}
-  .hero .logo{width:150px;margin-bottom:36px}
-  .hero h1{font-size:32px;line-height:1.14}
-  .hero .sub{font-size:18px;margin-top:18px}
-  .fit-lead{margin-top:24px}
-  .fit li{font-size:16px}
+  .hero{padding-top:14px}
+  .topline{height:44px;margin-bottom:18px}
+  .topline img{width:122px}
+  .hero-grid{padding-bottom:28px;gap:0}
+  .eyebrow{font-size:11px;margin-bottom:12px}
+  .hero h1 .lead{font-size:19px;line-height:1.35}
+  .hero h1 .main{font-size:38px;line-height:1.08;margin-top:8px}
+  .hero .sub{font-size:17px;margin-top:14px}
+  .portrait{display:none}
+  .presenter-row{display:flex;margin-top:18px}
+  .act{margin-top:18px;flex-direction:column;align-items:stretch;gap:14px}
+  .when{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 10px;max-width:none;order:-1}
+  .when-line{font-size:14px}
   .btn{width:100%}
-  .portrait{max-width:none}
-  .portrait img{aspect-ratio:1/1}
+  .under{text-align:center}
+  .fitcard{margin:0;padding:22px 20px 14px;border-radius:var(--r-card) var(--r-card) 0 0;box-shadow:none;border:0}
+  .fit{grid-template-columns:1fr}
+  .fit li:nth-child(5){grid-column:auto}
+  .cred{padding-top:0}
   .cred ul{grid-template-columns:1fr 1fr;padding:6px var(--gut)}
   .cred li{padding:14px 12px 14px 0;border-left:0;border-top:1px solid var(--line);font-size:13px}
-  .cred li:nth-child(-n+2){border-top:0}
-  .cred li:first-child{grid-column:1/-1}
-  .cred li:nth-child(2){border-top:1px solid var(--line)}
+  .cred li:first-child{grid-column:1/-1;border-top:0}
+  .cred li:nth-child(4){padding-left:0}
+  .path-h{display:none}
+  .path-v{display:block;max-width:320px;margin:0 auto}
   .rows li{grid-template-columns:44px 1fr;padding:22px 0}
-  .fitf-grid{grid-template-columns:1fr;gap:40px}
+  .learn-head .btn{display:none}
+  .fitf-grid{grid-template-columns:1fr;gap:36px}
+  .col li{padding:12px 0;font-size:16px}
   .steps{grid-template-columns:1fr;gap:28px}
   .steps li{padding:0 0 0 36px}
   .steps li::before{top:3px}
-  .form-card{padding:28px 20px}
+  .form-card{padding:24px 20px}
   .form-card h2{font-size:28px}
   form{grid-template-columns:1fr}
   .final h2{font-size:32px}
   .foot-grid{grid-template-columns:1fr;gap:20px}
+  .vb .hero-form{margin-top:22px}
   .sticky{top:auto;bottom:0;transform:translateY(110%);border-bottom:0;border-top:1px solid var(--line-light);padding-bottom:env(safe-area-inset-bottom)}
   .sticky .wrap{height:auto;padding-top:10px;padding-bottom:10px}
   .sticky .s-date{display:none}
@@ -232,38 +276,63 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
 
 <header class="hero" id="top">
   <div class="wrap">
-    <img class="logo" src="assets/logo-light.png" width="405" height="148" alt="Longmont Orthopedics">
+    <div class="topline"><img src="assets/logo-light.png" width="405" height="148" alt="Longmont Orthopedics"></div>
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Free live webinar from Longmont Orthopedics</p>
-        <h1><span class="dim">Therapy and cortisone shots didn’t hold.</span> <span class="dim">Surgery feels like too much.</span> <span>There’s a step in between.</span></h1>
+        <h1><span class="lead">Therapy and cortisone shots didn’t hold. Surgery feels like too much.</span> <span class="main">There’s a step in between.</span></h1>
         <p class="sub">Dr. Sunil Jani explains that step (PRP and bone marrow injections) and what it could mean for getting back to the activities you love.</p>
-        <p class="fit-lead">This is for you if:</p>
-        <ul class="fit">
-          <li>A knee, shoulder, hip, elbow or ankle has hurt for months.</li>
-          <li>Each cortisone shot seems to wear off a little sooner than the last one.</li>
-          <li>Someone has mentioned surgery or a joint replacement, and you want to understand the alternatives first.</li>
-          <li>You’ve already had PRP somewhere else, and it didn’t do what you hoped.</li>
-          <li>You’re active and want to stay that way.</li>
-        </ul>
-        <div class="when">
-          <span class="pill num" id="countdown">4 days left</span>
-          <span class="when-line num">Tuesday, November 17 · 7:00 PM Mountain · Online, from home · Free</span>
+        <div class="presenter-row">
+          <img src="assets/face.jpg" width="320" height="320" alt="">
+          <div><b>Dr. Sunil Jani, MD</b><span>Your presenter</span></div>
         </div>
-        <a class="btn" id="hero-cta" href="#lo-register">Save my free spot <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="act">
+          <a class="btn" id="hero-cta" href="#lo-register">Save my free spot <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="when">
+            <span class="pill num countdown">4 days left</span>
+            <span class="when-line num">Tuesday, November 17 · 7:00 PM Mountain · Online, from home · Free</span>
+          </div>
+        </div>
         <p class="under">Four quick fields, and you’re in.</p>
       </div>
-      <div class="portrait">
-        <img src="assets/jani.jpg" width="933" height="1400" alt="Dr. Sunil Jani, orthopedic surgeon at Longmont Orthopedics" fetchpriority="high">
-        <div class="host"><b>Dr. Sunil Jani, MD</b><span>Your presenter</span></div>
+      <figure class="portrait">
+        <img src="assets/hero.jpg" width="599" height="900" alt="Dr. Sunil Jani, orthopedic surgeon at Longmont Orthopedics" fetchpriority="high">
+        <figcaption><b>Dr. Sunil Jani, MD</b><span>Your presenter</span></figcaption>
+      </figure>
+      <div class="hero-form" id="hero-form">
+        <div class="form-card">
+          <h2>Get your webinar link</h2>
+          <form class="reg" novalidate>
+            <div class="field"><label for="hfn">First name</label><input id="hfn" name="first_name" autocomplete="given-name" required></div>
+            <div class="field"><label for="hln">Last name</label><input id="hln" name="last_name" autocomplete="family-name" required></div>
+            <div class="field full"><label for="hph">Phone (for reminders)</label><input id="hph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+            <div class="field full"><label for="hem">Email</label><input id="hem" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" required></div>
+            <button class="btn" type="submit">Save my free spot</button>
+            <p class="preview-msg" role="status">Preview only. On the live page this is the GHL form.</p>
+            <p class="form-note">Can’t attend live? Register anyway, and we’ll send you the replay.</p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
+<div class="wrap fitwrap">
+  <div class="fitcard">
+    <p>This is for you if:</p>
+    <ul class="fit">
+      <li>A knee, shoulder, hip, elbow or ankle has hurt for months.</li>
+      <li>Each cortisone shot seems to wear off a little sooner than the last one.</li>
+      <li>Someone has mentioned surgery or a joint replacement, and you want to understand the alternatives first.</li>
+      <li>You’ve already had PRP somewhere else, and it didn’t do what you hoped.</li>
+      <li>You’re active and want to stay that way.</li>
+    </ul>
+  </div>
+</div>
+
 <div class="cred">
   <ul>
-    <li><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="num">5.0 on Google</span></li>
+    <li><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><span class="num">5.0 on Google · 15 reviews</span></li>
     <li>Board-certified orthopedic surgeon</li>
     <li>Orthopedic residency, University of Pennsylvania</li>
     <li>Sports medicine fellowship, Taos Orthopedic Institute</li>
@@ -279,15 +348,13 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
       <p>Another shot may buy a little time. Surgery is a big step to take without knowing what else is possible.</p>
       <p>Before you choose either one, find out what sits between them. Dr. Jani walks through it on Tuesday and takes your questions live.</p>
     </div>
-    <figure style="margin:0">
-      <svg class="path" viewBox="0 0 520 210" role="img" aria-labelledby="path-t">
+    <div>
+      <svg class="path path-h" viewBox="0 0 520 210" role="img" aria-labelledby="path-t">
         <title id="path-t">Three paths: therapy and shots, PRP and bone marrow injections, surgery. The middle one is highlighted.</title>
         <line x1="40" y1="90" x2="480" y2="90" stroke="#044389" stroke-width="2.5" stroke-linecap="round"/>
         <circle cx="40" cy="90" r="14" fill="#F6F9F5" stroke="#044389" stroke-width="2.5"/>
         <circle cx="480" cy="90" r="14" fill="#F6F9F5" stroke="#044389" stroke-width="2.5"/>
-        <g stroke="#FCBF49" stroke-width="4" stroke-linecap="round">
-          <path d="M260 30v14M260 136v14M200 90h14M306 90h14M217.6 47.6l9.9 9.9M292.5 122.5l9.9 9.9M217.6 132.4l9.9-9.9M292.5 57.5l9.9-9.9"/>
-        </g>
+        <g stroke="#FCBF49" stroke-width="4" stroke-linecap="round"><path d="M260 30v14M260 136v14M200 90h14M306 90h14M217.6 47.6l9.9 9.9M292.5 122.5l9.9 9.9M217.6 132.4l9.9-9.9M292.5 57.5l9.9-9.9"/></g>
         <circle cx="260" cy="90" r="30" fill="#FCBF49"/>
         <g font-family="Montserrat, system-ui, sans-serif" font-weight="700" font-size="13" letter-spacing="1.2" text-anchor="middle" fill="#044389">
           <text x="40" y="190">THERAPY</text><text x="40" y="207" font-weight="600" fill="#4D5A68" letter-spacing=".4" font-size="12">and shots</text>
@@ -295,16 +362,27 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
           <text x="480" y="190">SURGERY</text>
         </g>
       </svg>
-      <figcaption class="path-cap">The step in between is the one most people never hear explained.</figcaption>
-    </figure>
+      <svg class="path path-v" viewBox="0 0 320 330" role="img" aria-labelledby="path-tv">
+        <title id="path-tv">Three paths: therapy and shots, PRP and bone marrow injections, surgery. The middle one is highlighted.</title>
+        <line x1="60" y1="30" x2="60" y2="300" stroke="#044389" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="60" cy="30" r="13" fill="#F6F9F5" stroke="#044389" stroke-width="2.5"/>
+        <circle cx="60" cy="300" r="13" fill="#F6F9F5" stroke="#044389" stroke-width="2.5"/>
+        <g stroke="#FCBF49" stroke-width="4" stroke-linecap="round"><path d="M60 115v12M60 203v12M15 165h12M93 165h12M28.2 133.2l8.5 8.5M83.3 188.3l8.5 8.5M28.2 196.8l8.5-8.5M83.3 141.7l8.5-8.5"/></g>
+        <circle cx="60" cy="165" r="25" fill="#FCBF49"/>
+        <g font-family="Montserrat, system-ui, sans-serif" font-weight="700" font-size="15" letter-spacing="1" fill="#044389">
+          <text x="112" y="28">THERAPY</text><text x="112" y="48" font-weight="600" fill="#4D5A68" letter-spacing=".3" font-size="14">and shots</text>
+          <text x="125" y="160">PRP AND</text><text x="125" y="180">BONE MARROW</text><text x="125" y="200" font-weight="600" fill="#4D5A68" letter-spacing=".3" font-size="14">injections</text>
+          <text x="112" y="305">SURGERY</text>
+        </g>
+      </svg>
+    </div>
   </div>
 </section>
 
 <section class="learn" aria-labelledby="learn-h" style="padding-top:0">
   <div class="wrap learn-grid">
     <div class="learn-head">
-      <p class="label">What Dr. Jani covers</p>
-      <h2 id="learn-h" style="margin-top:16px">What you’ll leave knowing</h2>
+      <h2 id="learn-h">What you’ll leave knowing</h2>
       <a class="btn" href="#lo-register">Save my free spot</a>
     </div>
     <ol class="rows">
@@ -320,14 +398,14 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
 <section class="band" aria-labelledby="pres-h">
   <div class="wrap">
     <div class="pres-grid">
-      <div>
-        <img src="assets/jani.jpg" width="933" height="1400" alt="" loading="lazy">
-      </div>
+      <figure class="pres-photo" style="margin:0">
+        <img src="assets/presenter.jpg" width="720" height="720" alt="Dr. Sunil Jani" loading="lazy">
+        <figcaption>Dr. Jani is also a former world-ranked freestyle footbag (hacky sack) player.</figcaption>
+      </figure>
       <div class="pres-copy">
-        <p class="label">Who’s presenting</p>
-        <h2 id="pres-h" style="margin-top:16px">Meet your presenter</h2>
+        <h2 id="pres-h">Meet your presenter</h2>
         <p class="pres-name">Dr. Sunil Jani, MD · Orthopedic surgeon, Longmont Orthopedics</p>
-        <p>After years with a large health system, Dr. Jani opened Longmont Orthopedics, a small, family-run clinic, so he could spend more time with each patient. He’s also a former world-ranked freestyle footbag (hacky sack) player.</p>
+        <p>After years with a large health system, Dr. Jani opened Longmont Orthopedics, a small, family-run clinic, so he could spend more time with each patient.</p>
         <p>A visit with him starts with an exam and a look at your imaging on screen, and ends with a plan in plain words. He does the injections and the operations himself, so the treatment can match what the exam finds.</p>
         <p>Surgery can be necessary. The useful question is when it belongs in the plan, and that depends on the diagnosis, the imaging and your goals.</p>
       </div>
@@ -336,12 +414,15 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
     <div class="reviews" aria-labelledby="rev-h">
       <h2 id="rev-h">What patients say about Dr. Jani</h2>
       <div class="rev-grid">
-        <figure class="rev"><blockquote>After years of mountainbiking, bump skiing and running, my left knee was chronically bothering me. My pain is greatly reduced now, and I’m back to being active.</blockquote><figcaption><b>Nick P.</b> · Google review</figcaption></figure>
-        <figure class="rev"><blockquote>As a dancer and runner, I truly appreciate the time he spent and I am now able to return to the activities I love. Also as a physical therapist, I highly recommend Dr. Jani…</blockquote><figcaption><b>Kristen M.</b> · Google review</figcaption></figure>
-        <figure class="rev"><blockquote>First, I wasn’t sure if PRP would work because I had seen several orthopedic doctors before about my knee. Dr. Jani explains how PRP works. I trusted him to do it, and I’m glad I did!</blockquote><figcaption><b>Francisca B.</b> · Google review</figcaption></figure>
+        <figure class="rev"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><blockquote>“After years of mountainbiking, bump skiing and running, my left knee was chronically bothering me. My pain is greatly reduced now, and I’m back to being active.”</blockquote><figcaption><b>Nick P.</b> · Google review</figcaption></figure>
+        <figure class="rev"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><blockquote>“As a dancer and runner, I truly appreciate the time he spent and I am now able to return to the activities I love. Also as a physical therapist, I highly recommend Dr. Jani…”</blockquote><figcaption><b>Kristen M.</b> · Google review</figcaption></figure>
+        <figure class="rev"><span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20"><path d="m10 1.5 2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span><blockquote>“First, I wasn’t sure if PRP would work because I had seen several orthopedic doctors before about my knee. Dr. Jani explains how PRP works. I trusted him to do it, and I’m glad I did!”</blockquote><figcaption><b>Francisca B.</b> · Google review</figcaption></figure>
       </div>
       <div class="rev-foot">
-        <p class="small">Individual results vary. Each review describes one person’s experience.</p>
+        <div class="meta">
+          <a class="glink" href="https://maps.google.com/?cid=15135631223160256312" target="_blank" rel="noopener">Read all 15 reviews on Google</a>
+          <p class="small">Individual results vary. Each review describes one person’s experience.</p>
+        </div>
         <a class="btn" href="#lo-register">Save my free spot</a>
       </div>
     </div>
@@ -387,21 +468,22 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
 <section class="register" id="lo-register" aria-labelledby="form-h">
   <div class="wrap">
     <div class="form-card">
+      <div class="form-meta"><img src="assets/face.jpg" width="320" height="320" alt=""><span class="num">Tuesday, November 17 · 7:00 PM Mountain · Online, from home · Free</span></div>
       <h2 id="form-h">Get your webinar link</h2>
-      <form id="reg" novalidate>
+      <form class="reg" novalidate>
         <div class="field"><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
         <div class="field"><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
         <div class="field full"><label for="ph">Phone (for reminders)</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
         <div class="field full"><label for="em">Email</label><input id="em" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" required></div>
         <button class="btn" type="submit">Save my free spot</button>
-        <p class="preview-msg" id="pmsg" role="status">Preview only. On the live page this is the GHL form.</p>
+        <p class="preview-msg" role="status">Preview only. On the live page this is the GHL form.</p>
         <p class="form-note">Can’t attend live? Register anyway, and we’ll send you the replay.</p>
       </form>
     </div>
   </div>
 </section>
 
-<section aria-labelledby="faq-h">
+<section class="faq-sec" aria-labelledby="faq-h">
   <div class="wrap faq-grid">
     <h2 id="faq-h">Questions before you sign up</h2>
     <div class="faq">
@@ -435,31 +517,30 @@ footer{margin-top:clamp(88px,11vw,128px);border-top:1px solid var(--line-light);
 
 <script>
 (function(){
-  // Countdown to Tue Nov 17, 2026, counted in Mountain time calendar days
-  var pill=document.getElementById('countdown');
+  var vb=document.documentElement.classList.contains('vb');
+  // Countdown to Tue Nov 17, 2026, in Mountain-time calendar days
   try{
     var fmt=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Denver',year:'numeric',month:'2-digit',day:'2-digit'});
-    var today=new Date(fmt.format(new Date())+'T00:00:00Z');
-    var event=new Date('2026-11-17T00:00:00Z');
-    var d=Math.round((event-today)/86400000);
-    if(d>1){pill.textContent=d+' days left';}
-    else if(d===1){pill.textContent='Tomorrow at 7 PM MT';}
-    else if(d===0){pill.textContent='Today at 7 PM MT';}
-    else{pill.style.display='none';}
+    var today=new Date(fmt.format(new Date())+'T00:00:00Z'), event=new Date('2026-11-17T00:00:00Z');
+    var d=Math.round((event-today)/86400000), txt=d>1?d+' days left':d===1?'Tomorrow at 7 PM MT':d===0?'Today at 7 PM MT':'';
+    document.querySelectorAll('.countdown').forEach(function(p){if(txt){p.textContent=txt;}else{p.style.display='none';}});
   }catch(e){}
-  // Sticky bar after the hero button leaves the screen
-  var bar=document.getElementById('sticky'), cta=document.getElementById('hero-cta'), form=document.getElementById('lo-register');
+  // Sticky bar. Desktop: after the hero action scrolls away. Mobile: from the first screen.
+  // Both: hidden while the hero action, any in-page button, a form or the closing section is on screen.
+  var bar=document.getElementById('sticky'), anchor=vb?document.getElementById('hero-form'):document.getElementById('hero-cta');
   if('IntersectionObserver' in window){
-    var heroOut=false, ctaVis=false, formIn=false, finalIn=false, mq=window.matchMedia('(max-width:640px)');
-    // Desktop: bar after the hero button scrolls away. Mobile: bar from the first screen. Both: hidden while the hero button, the form or the closing section is visible.
-    var set=function(){var on=(mq.matches?!ctaVis:heroOut)&&!formIn&&!finalIn;bar.classList.toggle('on',on);bar.setAttribute('aria-hidden',on?'false':'true');bar.querySelector('a').tabIndex=on?0:-1;};
-    new IntersectionObserver(function(e){ctaVis=e[0].isIntersecting;heroOut=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;set();}).observe(cta);
-    if(mq.addEventListener){mq.addEventListener('change',set);}
-    new IntersectionObserver(function(e){formIn=e[0].isIntersecting;set();},{threshold:.2}).observe(form);
+    var heroOut=false, anchorVis=false, btnVis=0, formIn=false, finalIn=false, mq=window.matchMedia('(max-width:640px)');
+    var set=function(){var on=(mq.matches?!anchorVis:heroOut)&&!btnVis&&!formIn&&!finalIn;bar.classList.toggle('on',on);bar.setAttribute('aria-hidden',on?'false':'true');bar.querySelector('a').tabIndex=on?0:-1;};
+    new IntersectionObserver(function(e){anchorVis=e[0].isIntersecting;heroOut=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;set();}).observe(anchor);
+    var vis=new Set();
+    var bo=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting&&x.target.offsetParent!==null){vis.add(x.target);}else{vis.delete(x.target);}});btnVis=vis.size;set();});
+    document.querySelectorAll('.learn-head .btn,.rev-foot .btn').forEach(function(b){bo.observe(b);});
+    new IntersectionObserver(function(e){formIn=e[0].isIntersecting;set();},{threshold:.2}).observe(document.getElementById('lo-register'));
     new IntersectionObserver(function(e){finalIn=e[0].isIntersecting;set();},{threshold:.15}).observe(document.querySelector('.final'));
+    if(mq.addEventListener){mq.addEventListener('change',set);}
   }
-  // Preview form: no submission
-  document.getElementById('reg').addEventListener('submit',function(e){e.preventDefault();document.getElementById('pmsg').classList.add('on');});
+  // Preview forms: no submission
+  document.querySelectorAll('form.reg').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();f.querySelector('.preview-msg').classList.add('on');});});
 })();
 </script>
 </body>
