@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Longmont Webinar Page Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Heebo:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#091405;--paper:#F6F9F5;--navy:#044389;--gold:#FCBF49;--line:rgba(4,67,137,.14)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Heebo,system-ui,sans-serif}
+.top{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;padding:24px 28px 16px}
+h1{font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;letter-spacing:-.02em;margin:0;color:var(--navy)}
+.top p{margin:6px 0 0;font-size:15px;color:#4D5A68;max-width:720px;line-height:1.5}
+.top a{color:var(--navy)}
+.tabs{display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px}
+.tabs button{border:0;background:transparent;font:600 14px Montserrat,sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--navy);color:#fff}
+.tabs button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.stage{display:grid;grid-template-columns:1fr 430px;gap:28px;padding:8px 28px 40px;align-items:start}
+.stage.d{grid-template-columns:1fr}
+.stage.m{grid-template-columns:430px;justify-content:center}
+.stage.d .mob,.stage.m .desk{display:none}
+.label{font:700 12px Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:#4D5A68;margin:0 0 10px}
+.dframe{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(2,44,92,.10)}
+.bar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--line);background:#fafbfa}
+.bar i{width:9px;height:9px;border-radius:50%;background:#dde3e8}
+.dwrap{position:relative;overflow:hidden}
+.dwrap iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0}
+.phone{width:430px;background:#111;border-radius:48px;padding:20px;box-shadow:0 18px 50px rgba(2,44,92,.18)}
+.phone iframe{display:block;width:390px;height:844px;border:0;border-radius:30px;background:#fff}
+@media (max-width:1100px){.stage{grid-template-columns:1fr}.mob{justify-self:center}}
+@media (max-width:480px){.phone{width:100%;padding:10px;border-radius:30px}.phone iframe{width:100%}.stage{padding:8px 12px 32px}.top{padding:20px 16px 12px}}
+.notes{max-width:980px;margin:0 auto;padding:8px 28px 72px}
+.notes h2{font-family:Montserrat,sans-serif;font-weight:700;font-size:24px;letter-spacing:-.02em;margin:40px 0 6px;color:var(--navy)}
+.notes h3{font-family:Montserrat,sans-serif;font-weight:700;font-size:17px;letter-spacing:-.01em;margin:28px 0 8px}
+.notes p,.notes li,.notes td{font-size:15px;line-height:1.6;color:#2b3640}
+.notes p.lede{color:#4D5A68;margin-top:0}
+.notes ol,.notes ul{padding-left:20px;margin:8px 0}
+.notes li{margin:4px 0}
+.notes li b,.notes td b{color:var(--ink)}
+.notes table{border-collapse:collapse;width:100%;margin:8px 0}
+.notes td{border-top:1px solid var(--line);padding:8px 10px 8px 0;vertical-align:top}
+.notes .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid rgba(0,0,0,.1)}
+.notes .rule{border:0;border-top:1px solid var(--line);margin:40px 0 0}
+.notes code{font-size:13px;background:#eef3f9;padding:1px 5px;border-radius:4px}
+@media (max-width:480px){.notes{padding:8px 16px 56px}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div>
+    <h1>Longmont Orthopedics: webinar registration page</h1>
+    <p>Layout preview for the Nov 17 webinar page with Dr. Sunil Jani, desktop at 1440 and mobile at 390. Scroll inside each frame. Copy is version 1.1 from the vault. The form is a styled stand-in; the live page uses the GHL form. <a href="page.html">Open the page on its own</a>.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="View">
+    <button class="on" data-v="" role="tab">Both</button><button data-v="d" role="tab">Desktop</button><button data-v="m" role="tab">Mobile</button>
+  </div>
+</div>
+<div class="stage" id="stage">
+  <div class="desk">
+    <p class="label">Desktop · 1440</p>
+    <div class="dframe"><div class="bar"><i></i><i></i><i></i></div><div class="dwrap" id="dwrap"><iframe id="dfr" src="page.html" title="Desktop layout"></iframe></div></div>
+  </div>
+  <div class="mob">
+    <p class="label">Mobile · 390</p>
+    <div class="phone"><iframe src="page.html" title="Mobile layout"></iframe></div>
+  </div>
+</div>
+
+<section class="notes">
+  <hr class="rule">
+  <h2>Layout and build notes</h2>
+  <p class="lede">The page has one job: get someone whose joint pain hasn’t settled registered for Dr. Jani’s webinar. Every button jumps to the form. When you give feedback, name the section number.</p>
+
+  <h3>Page settings</h3>
+  <table>
+    <tr><td><b>URL</b></td><td>go.longmontorthopedics.com/webinar-page (keep the live URL; the ads already point there)</td></tr>
+    <tr><td><b>Browser title</b></td><td>Free Webinar with Dr. Sunil Jani · Nov 17 · Longmont Orthopedics (the live page has none)</td></tr>
+    <tr><td><b>Description</b></td><td>A free live webinar with orthopedic surgeon Dr. Sunil Jani on PRP, bone marrow injections and when surgery makes sense. Tuesday, November 17, 7 PM Mountain.</td></tr>
+    <tr><td><b>Form</b></td><td>Existing GHL form, same four fields (first name, last name, phone for reminders, email). Anchor <code>#lo-register</code>. Button text "Save my free spot".</td></tr>
+    <tr><td><b>Tracking</b></td><td>Keep the live page’s Meta pixel and the registration event as they are now</td></tr>
+  </table>
+
+  <h3>Brand</h3>
+  <p>Taken from longmontorthopedics.com: Montserrat for headings, Heebo for body text.</p>
+  <table>
+    <tr><td><span class="sw" style="background:#044389"></span><b>#044389</b> navy</td><td>Headings on light, the path line, links</td></tr>
+    <tr><td><span class="sw" style="background:#022C5C"></span><b>#022C5C</b> deep navy</td><td>Hero and closing bands (navy to deep navy, 160°)</td></tr>
+    <tr><td><span class="sw" style="background:#FCBF49"></span><b>#FCBF49</b> gold</td><td>Buttons, stars, the countdown pill and the sun stop only</td></tr>
+    <tr><td><span class="sw" style="background:#091405"></span><b>#091405</b> ink</td><td>Body text</td></tr>
+    <tr><td><span class="sw" style="background:#4D5A68"></span><b>#4D5A68</b> slate</td><td>Secondary text</td></tr>
+    <tr><td><span class="sw" style="background:#F6F9F5"></span><b>#F6F9F5</b> paper</td><td>Page background</td></tr>
+    <tr><td><span class="sw" style="background:#EAF1F9"></span><b>#EAF1F9</b> light blue</td><td>Presenter and reviews band</td></tr>
+  </table>
+
+  <h3>Images</h3>
+  <ul>
+    <li><b>Logo, white text</b> (hero and footer): <code>assets/logo-light.png</code>, from the live GHL page.</li>
+    <li><b>Logo, navy text</b> (spare, for light backgrounds): <code>assets/logo-dark.png</code>, from longmontorthopedics.com.</li>
+    <li><b>Dr. Jani headshot</b> (hero and presenter): <code>assets/jani.jpg</code>, from the live GHL page. It’s the only photo on file, so it appears twice with different crops. Worth asking Anne for a clinic shot of Dr. Jani with a patient for the presenter section.</li>
+  </ul>
+
+  <h3>Section by section</h3>
+  <ol>
+    <li><b>Sticky bar.</b> Desktop: navy bar at the top with the date and the button; it slides in once the hero button scrolls away. Mobile: button at the bottom from the first screen. Both hide while the hero button, the form or the closing section is on screen.</li>
+    <li><b>Hero.</b> Navy band. Logo, eyebrow, three-sentence headline (first two sentences dimmed, the answer bright), subhead, the five "This is for you if" lines, countdown pill and event line, one button. Dr. Jani’s photo on the right on desktop, below the button on mobile. On a 390 phone the first screen shows the eyebrow, headline, subhead and the first two lines; the bottom bar carries the button.</li>
+    <li><b>Credibility bar.</b> Five items in one strip with hairline dividers: 5.0 on Google, board-certified, Penn residency, Taos fellowship, 10+ years in Longmont. Two columns on mobile.</li>
+    <li><b>The problem.</b> The page’s quiet section: three short paragraphs on the left, the "step in between" diagram on the right. The diagram is the page’s motif: three stops on one line, with the middle stop drawn as the gold sun from the Longmont logo.</li>
+    <li><b>What you’ll leave knowing.</b> Heading and button on the left (they stay in view while scrolling on desktop), five numbered rows on the right with hairline dividers.</li>
+    <li><b>Meet your presenter.</b> Light blue band, photo left, three paragraphs right.</li>
+    <li><b>What patients say.</b> Same band. Three Google reviews as quotes, the results line, and a button.</li>
+    <li><b>Who this webinar fits.</b> Two columns, "good fit" with a navy rule, "probably not" with a gray one. Stacked on mobile.</li>
+    <li><b>How the webinar works.</b> Four numbered steps on one line (the path line again, without the sun). Two columns on tablet, stacked on mobile.</li>
+    <li><b>Form.</b> White card with a soft shadow, labels above the fields, gold button full width, replay line under it.</li>
+    <li><b>FAQ.</b> Five questions, closed by default, chevron opens each.</li>
+    <li><b>Final CTA and footer.</b> Navy band, a small three-dot version of the path, headline, closing line, event line, button. Footer inside the same band: logo, address and phone as on Google, email, disclaimer.</li>
+  </ol>
+
+  <h3>How the page behaves</h3>
+  <ul>
+    <li>The countdown pill counts days to November 17 in Mountain time: "4 days left," then "Tomorrow at 7 PM MT," then "Today at 7 PM MT," then it hides.</li>
+    <li>Every "Save my free spot" button scrolls to the form. Nothing links off the page except the phone and email in the footer.</li>
+    <li>No scroll animations. Buttons darken slightly on hover. The sticky bar slide is turned off for people who reduce motion.</li>
+  </ul>
+
+  <h3>Checked on this build</h3>
+  <ul>
+    <li>Desktop 1440 and mobile 390 reviewed screen by screen. No sideways scroll on mobile. Zero console errors, zero em dashes, no dead links.</li>
+    <li>Text contrast passes AA everywhere (body text 17.8:1, secondary 6.2:1 or better, button text 11.4:1).</li>
+  </ul>
+
+  <h3>Before it goes live</h3>
+  <ul>
+    <li>Kyle’s OK on the three review excerpts.</li>
+    <li>Ahmed confirms the registration workflow sends the link and a reminder to every registrant (step 2 of "How the webinar works").</li>
+    <li>Recheck the Google rating the day before.</li>
+    <li>US Ski Team line stays off until Anne confirms the wording.</li>
+  </ul>
+</section>
+
+<script>
+(function(){
+  var stage=document.getElementById('stage'), btns=document.querySelectorAll('.tabs button');
+  btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');stage.className='stage '+b.dataset.v;fit();});});
+  var wrap=document.getElementById('dwrap'), fr=document.getElementById('dfr');
+  function fit(){var w=wrap.clientWidth; if(!w) return; var s=w/1440; fr.style.transform='scale('+s+')'; wrap.style.height=(900*s)+'px';}
+  window.addEventListener('resize',fit); fit();
+})();
+</script>
+</body>
+</html>
